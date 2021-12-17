@@ -1,5 +1,14 @@
 function balancingParentheses(string) {
-  // type your code here
+  let val = string.split('').reduce((balance, character) => {
+    if (character === "(") {
+      return balance + 1
+    }
+    else {
+      return balance - 1
+    }
+  }, 0)
+
+  return Math.abs(val)
 }
 
 if (require.main === module) {
